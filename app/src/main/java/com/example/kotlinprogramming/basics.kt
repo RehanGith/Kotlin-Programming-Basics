@@ -10,13 +10,25 @@ fun main() {
 //        println(i)
 //    }
     val arr:ArrayList<Int> = ArrayList()
-    for(i in 0..10) {
-        arr.add(i, 2*i)
+//    for(i in 0..10) {
+//        arr.add(i, 2*i)
+//    }
+//    arr?.let { nonNullArr ->
+//        for(i in nonNullArr) {
+//            println(i)
+//        }
+//
+//    }
+    var i = 1
+    while(true) {
+        arr.add(i)
+        i++
+        if(i == 10)
+            break
     }
     arr?.let { nonNullArr ->
-        for(i in nonNullArr) {
-            println(i)
+        for (j in nonNullArr) {
+            println(j)
         }
-
     }
 }
