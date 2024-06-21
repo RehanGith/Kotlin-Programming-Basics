@@ -19,16 +19,30 @@ fun main() {
 //        }
 //
 //    }
+//    var i = 1
+//    while(true) {
+//        arr.add(i)
+//        i++
+//        if(i == 10)
+//            break
+//    }
+//    arr?.let { nonNullArr ->
+//        for (j in nonNullArr) {
+//            println(j)
+//        }
+//    }
     var i = 1
-    while(true) {
+    do {
         arr.add(i)
         i++
         if(i == 10)
             break
-    }
-    arr?.let { nonNullArr ->
-        for (j in nonNullArr) {
-            println(j)
-        }
+    } while(true)
+    i = 1
+    arr.let { nonNullArr ->
+        do {
+            println(nonNullArr[i])
+            i++
+        } while (i <9)
     }
 }
