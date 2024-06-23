@@ -1,6 +1,17 @@
 package com.example.kotlinprogramming
 
+class MobilePhone(osName: String, brand: String, model: String){
+    var battary: Int = 20
+    init {
+        println("The phone $model from $brand uses $osName as its Operating System")
+    }
+    fun chargeBattary(value:Int) {
 
+        println("Mobile had battery ${battary}, that is charged by ${value}")
+        battary = if(battary + value > 100) 100 else battary+ value
+        println("Now the battery is $battary")
+    }
+}
 class Person (fName: String, sName: String){
     lateinit var firstName:String
     lateinit var secondName:String
@@ -27,8 +38,6 @@ class Person (fName: String, sName: String){
     }
 }
 fun main() {
-
-    var person1 = Person("Muhammad", "Rehan", 20)
-    person1.age = -20
-    println(person1.age)
+    var mobile1:MobilePhone = MobilePhone("Android", "Vivo", "Y12")
+    mobile1.chargeBattary(50)
 }
