@@ -31,13 +31,21 @@ fun main() {
 //            println(j)
 //        }
 //    }
-    var condition:String = "Cold"
-    var temp = 10
-    println(condition)
-    while(condition == "Cold") {
-        temp++
-        if(temp >=20)
-            condition = "Comfy"
-    }
-    println(condition)
+//    var condition:String = "Cold"
+//    var temp = 10
+//    println(condition)
+//    while(condition == "Cold") {
+//        temp++
+//        if(temp >=20)
+//            condition = "Comfy"
+//    }
+//    println(condition)
+    var result:Double = average(4.0, 5.0)
+    println("Result ${result}")
+}
+
+fun average(a: Double, b:Double): Double {
+    var ave:Double
+    ave = a+b/2
+    return ave
 }
