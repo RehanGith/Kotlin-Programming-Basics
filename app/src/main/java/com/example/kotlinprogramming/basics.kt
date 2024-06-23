@@ -5,6 +5,13 @@ class Person (fName: String, sName: String){
     lateinit var firstName:String
     lateinit var secondName:String
     var age:Int = 0
+        get() {
+            println("Age getter is being called")
+            return field
+        }
+        set(value) {
+            field = if(value > 0) value else throw IllegalArgumentException("Age cannot be negative")
+        }
     init {
         this.firstName = fName
         this.secondName = sName
@@ -22,5 +29,6 @@ class Person (fName: String, sName: String){
 fun main() {
 
     var person1 = Person("Muhammad", "Rehan", 20)
-    person1.displayDetail()
+    person1.age = -20
+    println(person1.age)
 }
