@@ -9,7 +9,7 @@ fun main() {
 //    for(i in arr) {
 //        println(i)
 //    }
-    val arr:ArrayList<Int> = ArrayList()
+  //  val arr:ArrayList<Int> = ArrayList()
 //    for(i in 0..10) {
 //        arr.add(i, 2*i)
 //    }
@@ -31,18 +31,13 @@ fun main() {
 //            println(j)
 //        }
 //    }
-    var i = 1
-    do {
-        arr.add(i)
-        i++
-        if(i == 10)
-            break
-    } while(true)
-    i = 1
-    arr.let { nonNullArr ->
-        do {
-            println(nonNullArr[i])
-            i++
-        } while (i <9)
+    var condition:String = "Cold"
+    var temp = 10
+    println(condition)
+    while(condition == "Cold") {
+        temp++
+        if(temp >=20)
+            condition = "Comfy"
     }
+    println(condition)
 }
